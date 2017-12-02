@@ -11,3 +11,7 @@ Required external installs
 * [oh-my-tmux](https://github.com/gpakosz/.tmux)
 * [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 * [Powerline Fonts](https://github.com/powerline/fonts)
+
+Screenshots
+![Capture1](https://raw.githubusercontent.com/cujomalainey/system-config/master/Capture1.png)
+![Capture2](https://raw.githubusercontent.com/cujomalainey/system-config/master/Capture2.png)
