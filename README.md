@@ -2,11 +2,11 @@
 
 Use this data to recreate my dev environment
 
-Brew list needs to be scoped, there is a bunch of useless installs from schools and random tests
+Brew list needs to be installed
 
 Required external installs
-* https://brew.sh/
-* https://www.iterm2.com/
-* https://github.com/junegunn/vim-plug
-* https://github.com/gpakosz/.tmux
-* https://github.com/robbyrussell/oh-my-zsh
+* [Homebrew](https://brew.sh/)
+* [iTerm2](https://www.iterm2.com/)
+* [vim-plug](https://github.com/junegunn/vim-plug)
+* [oh-my-tmux](https://github.com/gpakosz/.tmux)
+* [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
