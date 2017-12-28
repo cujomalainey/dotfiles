@@ -8,6 +8,7 @@ ffmpeg
 fzf
 ghi
 git
+gitg
 git-secret
 github-release
 gnupg2

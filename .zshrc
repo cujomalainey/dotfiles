@@ -7,7 +7,7 @@ export ZSH=/Users/curtismalainey/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -99,7 +99,12 @@ export GIT_EDITOR='nvim'
 alias crap='fuck'
 source ~/.fonts/*.sh
 source "/usr/local/opt/zsh-git-prompt/zshrc.sh"
-export PROMPT='${ret_status} %{$fg[cyan]%}%c%{$reset_color%} $(git_super_status) %# '
-ansiweather -l "Vancouver" -d true -p false
-
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(vcs root_indicator background_jobs history status newline dir)
+POWERLEVEL9K_DISABLE_RPROMPT=true
+POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='117'
+POWERLEVEL9K_DIR_HOME_BACKGROUND='117'
+POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='117'
+POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='black'
+POWERLEVEL9K_VCS_CLEAN_BACKGROUND='076'
+POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='220'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
