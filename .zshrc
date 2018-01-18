@@ -99,7 +99,7 @@ export GIT_EDITOR='nvim'
 alias crap='fuck'
 source ~/.fonts/*.sh
 source "/usr/local/opt/zsh-git-prompt/zshrc.sh"
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(vcs root_indicator background_jobs history status newline dir)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs root_indicator background_jobs status)
 POWERLEVEL9K_DISABLE_RPROMPT=true
 POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='117'
 POWERLEVEL9K_DIR_HOME_BACKGROUND='117'
@@ -107,4 +107,5 @@ POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='117'
 POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='black'
 POWERLEVEL9K_VCS_CLEAN_BACKGROUND='076'
 POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='220'
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
