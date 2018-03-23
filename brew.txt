@@ -1,6 +1,4 @@
 ansiweather
-ccat
-cgrep
 cloc
 ctags
 exa
