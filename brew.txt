@@ -34,7 +34,6 @@ s-search
 thefuck
 tldr
 tmux
-tree
 wget
 youtube-dl
 zsh
