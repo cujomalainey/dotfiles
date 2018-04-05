@@ -55,6 +55,10 @@ plugins=(osx thefuck tmux git vundle)
 
 source $ZSH/oh-my-zsh.sh
 
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+fpath=(/usr/local/share/zsh-completions $fpath)
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -84,21 +88,45 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# 24 bit color support
 export TERM="xterm-256color"
+
+# cause vim is amazing
 export EDITOR="vim"
 export VISUAL="vim"
+export GIT_EDITOR='nvim'
+
+# this is iffy if it works but I should always be inside tmux
 export ZSH_TMUX_AUTOSTART=true
+
+# auto completes
 export fpath=(/usr/local/share/zsh-completions $fpath)
-alias ls='exa'
+
+# used for signing git commits
 export GPG_TTY=$(tty)
+
+# gpg i think needs this
 export PATH="/usr/local/sbin:$PATH"
+
+# tool replacements
+alias ls='exa'
+alias gitk='gitg'
+alias grep='rg'
+
+# short names
 alias vi='nvim'
 alias vim='vi'
-eval $(thefuck --alias)
-export GIT_EDITOR='nvim'
+
+# I don't like swearing
 alias crap='fuck'
+
+# setup thefuck
+eval $(thefuck --alias)
+
+# powerline fonts
 source ~/.fonts/*.sh
-source "/usr/local/opt/zsh-git-prompt/zshrc.sh"
+
+# configure powerlevel9k
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs root_indicator background_jobs status)
 POWERLEVEL9K_DISABLE_RPROMPT=true
 POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='117'
@@ -108,4 +136,6 @@ POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='black'
 POWERLEVEL9K_VCS_CLEAN_BACKGROUND='076'
 POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='220'
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
+
+# setup fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
