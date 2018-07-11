@@ -1,13 +1,15 @@
 ansiweather
 cloc
 ctags
+dos2unix
 exa
 ffmpeg
+fpp
 fzf
 ghi
 git
-gitg
 git-secret
+gitg
 github-release
 gnupg2
 gource
@@ -32,6 +34,7 @@ s-search
 thefuck
 tldr
 tmux
+urlview
 wget
 youtube-dl
 zsh
