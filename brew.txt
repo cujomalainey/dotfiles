@@ -16,6 +16,7 @@ gource
 gpg-agent
 grip
 gti
+htop
 hub
 known_hosts
 lolcat
