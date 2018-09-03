@@ -112,6 +112,7 @@ export PATH="/usr/local/sbin:$PATH"
 alias ls='exa'
 alias gitk='gitg'
 alias grep='rg'
+alias top='htop'
 
 # short names
 alias vi='nvim'

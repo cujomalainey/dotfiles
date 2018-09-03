@@ -11,12 +11,13 @@ Plug 'junegunn/vim-easy-align'
 " Multiple Plug commands can be written in a single line using | separators
 Plug 'honza/vim-snippets'
 Plug 'sudar/vim-arduino-snippets'
-
+Plug '~/.fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'airblade/vim-rooter'
 Plug 'jacoborus/tender.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'Raimondi/delimitMate'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-scripts/IndexedSearch'
 Plug 'tpope/vim-endwise'
 Plug 'godlygeek/tabular'
@@ -79,3 +80,11 @@ augroup END
 
 set grepprg=rg\ --vimgrep
 set grepformat^=%f:%l:%c:%m
+
+" Enable per-command history.
+" CTRL-N and CTRL-P will be automatically bound to next-history and 
+" previous-history instead of down and up. If you don't like the change,
+" explicitly bind the keys to down and up in your $FZF_DEFAULT_OPTS.
+let g:fzf_history_dir = '~/.local/share/fzf-history'
+
+nnoremap <c-p> :FZF<cr>
