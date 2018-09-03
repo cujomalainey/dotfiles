@@ -52,6 +52,8 @@ let g:airline_powerline_fonts = 1
 syntax enable
 colorscheme tender
 set number
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
 
 let g:cpp_class_scope_highlight = 1
 let g:cpp_member_variable_highlight = 1
