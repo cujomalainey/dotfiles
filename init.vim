@@ -92,3 +92,6 @@ nnoremap <c-p> :FZF<cr>
 " highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
+
+" figure out indent from file
+set smartindent
