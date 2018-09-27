@@ -140,3 +140,8 @@ POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 
 # setup fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# configure fzf to respect gitignore by using ripgrep
+export FZF_DEFAULT_COMMAND='rg --files'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND"
