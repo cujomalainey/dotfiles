@@ -88,3 +88,7 @@ set grepformat^=%f:%l:%c:%m
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 
 nnoremap <c-p> :FZF<cr>
+
+" highlight trailing whitespace
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
