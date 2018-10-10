@@ -145,3 +145,5 @@ POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 export FZF_DEFAULT_COMMAND='rg --files'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_DEFAULT_OPTS='--no-mouse'
+bindkey -s "\C-p" 'vim $(fzf)\n'
