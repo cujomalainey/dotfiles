@@ -105,8 +105,11 @@ export fpath=(/usr/local/share/zsh-completions $fpath)
 # used for signing git commits
 export GPG_TTY=$(tty)
 
-# gpg i think needs this
+# gpg i think needs this (TODO check this)
 export PATH="/usr/local/sbin:$PATH"
+
+# only keep unique history, speeds up ZSH plugins in theory
+export HISTCONTROL=ignoreboth:erasedups
 
 # tool replacements
 alias ls='exa'
