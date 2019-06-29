@@ -105,8 +105,11 @@ export fpath=(/usr/local/share/zsh-completions $fpath)
 # used for signing git commits
 export GPG_TTY=$(tty)
 
-# gpg i think needs this
+# gpg i think needs this (TODO check this)
 export PATH="/usr/local/sbin:$PATH"
+
+# only keep unique history, speeds up ZSH plugins in theory
+export HISTCONTROL=ignoreboth:erasedups
 
 # tool replacements
 alias ls='exa'
@@ -145,3 +148,5 @@ POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 export FZF_DEFAULT_COMMAND='rg --files'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_DEFAULT_OPTS='--no-mouse'
+bindkey -s "\C-p" 'vim $(fzf)\n'

@@ -1,8 +1,10 @@
 ansiweather
+bat
 cloc
 ctags
 dos2unix
 exa
+fd
 ffmpeg
 fpp
 fzf
@@ -15,6 +17,7 @@ gnupg2
 gource
 gpg-agent
 grip
+grv
 gti
 htop
 hub
@@ -32,6 +35,7 @@ python3
 reattach-to-user-namespace
 ripgrep
 s-search
+sl
 thefuck
 tldr
 tmux
