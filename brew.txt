@@ -35,6 +35,7 @@ s-search
 thefuck
 tldr
 tmux
+travis
 urlview
 wget
 youtube-dl
