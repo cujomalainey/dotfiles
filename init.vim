@@ -30,6 +30,7 @@ Plug 'tpope/vim-surround'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'Shougo/neoinclude.vim'
 Plug 'sheerun/vim-polyglot'
+Plug 'Yggdroot/indentLine'
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
