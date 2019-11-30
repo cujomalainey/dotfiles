@@ -43,7 +43,6 @@ travis
 urlview
 wget
 youtube-dl
-zsh
 zsh-autosuggestions
 zsh-completions
 zsh-syntax-highlighting
