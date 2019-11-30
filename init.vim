@@ -9,8 +9,6 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'junegunn/vim-easy-align'
 
 " Multiple Plug commands can be written in a single line using | separators
-Plug 'honza/vim-snippets'
-Plug 'sudar/vim-arduino-snippets'
 Plug '~/.fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-rooter'

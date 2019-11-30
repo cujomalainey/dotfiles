@@ -29,6 +29,7 @@ neovim
 nmap
 ntfs-3g
 platformio
+procs
 protobuf
 python
 python3
