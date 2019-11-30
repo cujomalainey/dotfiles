@@ -31,7 +31,6 @@ ntfs-3g
 platformio
 procs
 protobuf
-python
 python3
 reattach-to-user-namespace
 ripgrep
