@@ -7,7 +7,7 @@ export ZSH=/Users/curtismalainey/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -89,7 +89,7 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # 24 bit color support
-export TERM="xterm-256color"
+#export TERM="xterm-256color"
 
 # cause vim is amazing
 export EDITOR="vim"
@@ -105,7 +105,7 @@ export fpath=(/usr/local/share/zsh-completions $fpath)
 # used for signing git commits
 export GPG_TTY=$(tty)
 
-# gpg i think needs this (TODO check this)
+# gpg i think needs this
 export PATH="/usr/local/sbin:$PATH"
 
 # only keep unique history, speeds up ZSH plugins in theory
@@ -128,9 +128,6 @@ alias cdg='cd $(git rev-parse --show-toplevel)'
 
 # setup thefuck
 eval $(thefuck --alias)
-
-# powerline fonts
-source ~/.fonts/*.sh
 
 # configure powerlevel9k
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs root_indicator background_jobs status)
