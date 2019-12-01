@@ -15,7 +15,7 @@ gitg
 github-release
 gnupg2
 gource
-gpg-agent
+homebrew/cask/gpg-suite
 grip
 grv
 gti
