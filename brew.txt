@@ -39,6 +39,7 @@ sl
 thefuck
 tldr
 tmux
+topgrade
 travis
 urlview
 wget
