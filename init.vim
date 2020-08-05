@@ -1,6 +1,7 @@
 " Specify a directory for plugins
 " - For Neovim: ~/.local/share/nvim/plugged
 " - Avoid using standard Vim directory names like 'plugin'
+set rtp+=/usr/local/opt/fzf
 call plug#begin('~/.local/share/nvim/plugged')
 
 " Make sure you use single quotes
@@ -16,6 +17,7 @@ Plug 'jacoborus/tender.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'Raimondi/delimitMate'
+Plug 'luochen1990/rainbow'
 Plug 'vim-scripts/IndexedSearch'
 Plug 'tpope/vim-endwise'
 Plug 'godlygeek/tabular'
@@ -80,6 +82,8 @@ augroup END
 set grepprg=rg\ --vimgrep
 set grepformat^=%f:%l:%c:%m
 
+let g:rainbow_active = 1
+
 " Enable per-command history.
 " CTRL-N and CTRL-P will be automatically bound to next-history and 
 " previous-history instead of down and up. If you don't like the change,
@@ -94,3 +98,10 @@ match ExtraWhitespace /\s\+$/
 
 " figure out indent from file
 set smartindent
+
+" Figure out the system Python for Neovim.
+if exists("$VIRTUAL_ENV")
+    let g:python3_host_prog=substitute(system("which -a python3 | head -n2 | tail -n1"), "\n", '', 'g')
+else
+    let g:python3_host_prog=substitute(system("which python3"), "\n", '', 'g')
+endif
