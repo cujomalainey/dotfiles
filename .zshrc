@@ -152,3 +152,8 @@ bindkey -s "\C-p" 'vim \"$(fzf)\"\n'
 
 setopt NO_NOMATCH
 
+
+# added by travis gem
+[ -f /Users/curtismalainey/.travis/travis.sh ] && source /Users/curtismalainey/.travis/travis.sh
+
+bindkey "ã" fzf-cd-widget
