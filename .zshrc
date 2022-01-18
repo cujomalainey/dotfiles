@@ -51,7 +51,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(osx thefuck tmux git vundle)
+plugins=(macos thefuck tmux git vundle)
 
 source $ZSH/oh-my-zsh.sh
 
