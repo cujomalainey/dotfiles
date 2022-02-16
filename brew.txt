@@ -1,10 +1,8 @@
-ansiweather
 bat
 cloc
 ctags
 dos2unix
 exa
-fd
 ffmpeg
 fpp
 fzf
@@ -40,7 +38,6 @@ thefuck
 tldr
 tmux
 topgrade
-travis
 urlview
 wget
 youtube-dl
