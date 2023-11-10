@@ -2,7 +2,9 @@ bat
 cloc
 ctags
 dos2unix
-exa
+dust
+eza
+fd
 ffmpeg
 fpp
 fzf
@@ -37,6 +39,7 @@ topgrade
 urlview
 wget
 youtube-dl
+zoxide
 zsh-autosuggestions
 zsh-completions
 zsh-syntax-highlighting
