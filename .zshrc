@@ -112,7 +112,7 @@ export PATH="/usr/local/sbin:$PATH"
 export HISTCONTROL=ignoreboth:erasedups
 
 # tool replacements
-alias ls='exa'
+alias ls='eza'
 alias gitk='gitg'
 alias grep='rg'
 
