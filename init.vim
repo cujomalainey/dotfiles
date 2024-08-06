@@ -16,17 +16,16 @@ Plug 'airblade/vim-rooter'
 Plug 'jacoborus/tender.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
-" Plug 'Raimondi/delimitMate'
 Plug 'luochen1990/rainbow'
 Plug 'vim-scripts/IndexedSearch'
 Plug 'tpope/vim-endwise'
 Plug 'tomtom/tcomment_vim'
-Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-sleuth'
-Plug 'sheerun/vim-polyglot'
 Plug 'Yggdroot/indentLine'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'ludovicchabant/vim-gutentags'
 
 call plug#end()
 
@@ -103,3 +102,5 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+lua require'nvim-treesitter.configs'.setup{highlight={enable=true}}
