@@ -1,24 +1,17 @@
-" Specify a directory for plugins
-" - For Neovim: ~/.local/share/nvim/plugged
-" - Avoid using standard Vim directory names like 'plugin'
-set rtp+=/usr/local/opt/fzf
 call plug#begin('~/.local/share/nvim/plugged')
 
-" Make sure you use single quotes
-
-" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 Plug 'junegunn/vim-easy-align'
-
-" Multiple Plug commands can be written in a single line using | separators
-Plug '~/.fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-rooter'
 Plug 'jacoborus/tender.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
+Plug 'Raimondi/delimitMate'
 Plug 'luochen1990/rainbow'
 Plug 'vim-scripts/IndexedSearch'
 Plug 'tpope/vim-endwise'
+Plug 'godlygeek/tabular'
 Plug 'tomtom/tcomment_vim'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-sleuth'
@@ -40,6 +33,15 @@ let g:airline_powerline_fonts = 1
 syntax enable
 colorscheme tender
 set number
+
+" Unbind the cursor keys in insert, normal and visual modes.
+for prefix in ['i', 'n', 'v']
+  for key in ['<Up>', '<Down>', '<Left>', '<Right>']
+    exe prefix . "noremap " . key . " <Nop>"
+  endfor
+endfor
+
+set mouse=
 
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
@@ -68,9 +70,15 @@ nnoremap <c-p> :FZF<cr>
 " highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
+set colorcolumn=100
 
 " figure out indent from file
 set smartindent
+fun! TrimWhitespace()
+    let l:save = winsaveview()
+    keeppatterns %s/\s\+$//e
+    call winrestview(l:save)
+endfun
 
 " Figure out the system Python for Neovim.
 if exists("$VIRTUAL_ENV")
@@ -86,10 +94,13 @@ inoremap <silent><expr> <TAB>
 inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+				\: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+" set airline theme
+let g:airline_theme = 'tender'
 
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
@@ -98,4 +109,11 @@ nmap <silent> gr <Plug>(coc-references)
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
-lua require'nvim-treesitter.configs'.setup{highlight={enable=true}}
+" HACK to workaround the fact that tender doesn't publish comment groups
+" currently
+hi @comment.todo guifg=#f43753
+hi @comment.note guifg=#b3deef
+hi @comment.warning guibg=#ffc24b guifg=#202020
+hi @comment.error guibg=#f43753 guifg=#202020
+
+lua require("init")
