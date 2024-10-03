@@ -117,4 +117,6 @@ hi @comment.warning guibg=#ffc24b guifg=#202020
 hi @comment.error guibg=#f43753 guifg=#202020
 hi @keyword.directive guifg=#c9d05c
 
+set listchars+=space:-
+
 lua require("init")
