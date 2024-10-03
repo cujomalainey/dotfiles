@@ -24,7 +24,7 @@ call plug#end()
 
 " If you have vim >=8.0 or Neovim >= 0.1.5
 if (has("termguicolors"))
- set termguicolors
+    set termguicolors
 endif
 
 let g:airline_powerline_fonts = 1
@@ -36,9 +36,9 @@ set number
 
 " Unbind the cursor keys in insert, normal and visual modes.
 for prefix in ['i', 'n', 'v']
-  for key in ['<Up>', '<Down>', '<Left>', '<Right>']
-    exe prefix . "noremap " . key . " <Nop>"
-  endfor
+    for key in ['<Up>', '<Down>', '<Left>', '<Right>']
+	exe prefix . "noremap " . key . " <Nop>"
+    endfor
 endfor
 
 set mouse=
@@ -49,9 +49,9 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 set number relativenumber
 
 augroup numbertoggle
-  autocmd!
-  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+    autocmd!
+    autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+    autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 augroup END
 
 set grepprg=rg\ --vimgrep
@@ -88,9 +88,9 @@ else
 endif
 
 inoremap <silent><expr> <TAB>
-      \ coc#pum#visible() ? coc#pum#next(1) :
-      \ CheckBackspace() ? "\<Tab>" :
-      \ coc#refresh()
+    \ coc#pum#visible() ? coc#pum#next(1) :
+    \ CheckBackspace() ? "\<Tab>" :
+    \ coc#refresh()
 inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
