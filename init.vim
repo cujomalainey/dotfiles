@@ -115,5 +115,6 @@ hi @comment.todo guifg=#f43753
 hi @comment.note guifg=#b3deef
 hi @comment.warning guibg=#ffc24b guifg=#202020
 hi @comment.error guibg=#f43753 guifg=#202020
+hi @keyword.directive guifg=#c9d05c
 
 lua require("init")
