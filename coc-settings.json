@@ -1,0 +1,4 @@
+{
+	"rust-analyzer.server.path": "/usr/local/bin/rust-analyzer",
+	"suggest.noselect": true,
+}
