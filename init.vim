@@ -95,14 +95,20 @@ else
     let g:python3_host_prog=substitute(system("which python3"), "\n", '', 'g')
 endif
 
-inoremap <silent><expr> <TAB>
-    \ coc#pum#visible() ? coc#pum#next(1) :
-    \ CheckBackspace() ? "\<Tab>" :
-    \ coc#refresh()
-inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
-
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
 				\: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+" use <tab> to trigger completion and navigate to the next complete item
+function! CheckBackspace() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+inoremap <silent><expr> <Tab>
+      \ coc#pum#visible() ? coc#pum#next(1) :
+      \ CheckBackspace() ? "\<Tab>" :
+      \ coc#refresh()
+inoremap <expr> <Tab> coc#pum#visible() ? coc#pum#next(1) : "\<Tab>"
+inoremap <expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<S-Tab>"
 
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
