@@ -26,6 +26,9 @@ if (has("termguicolors"))
     set termguicolors
 endif
 
+" don't hide characters in json
+let g:indentLine_setConceal = 0
+
 " Theme
 syntax enable
 colorscheme tender
