@@ -27,12 +27,21 @@ if (has("termguicolors"))
     set termguicolors
 endif
 
-let g:airline_powerline_fonts = 1
-
 " Theme
 syntax enable
 colorscheme tender
-set number
+
+" set airline theme
+let g:airline_theme = 'tender'
+let g:airline_powerline_fonts = 1
+
+" HACK to workaround the fact that tender doesn't publish comment groups
+" currently
+hi @comment.todo guifg=#f43753
+hi @comment.note guifg=#b3deef
+hi @comment.warning guibg=#ffc24b guifg=#202020
+hi @comment.error guibg=#f43753 guifg=#202020
+hi @keyword.directive guifg=#c9d05c
 
 " Unbind the cursor keys in insert, normal and visual modes.
 for prefix in ['i', 'n', 'v']
@@ -96,23 +105,12 @@ inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
-" set airline theme
-let g:airline_theme = 'tender'
-
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
-" HACK to workaround the fact that tender doesn't publish comment groups
-" currently
-hi @comment.todo guifg=#f43753
-hi @comment.note guifg=#b3deef
-hi @comment.warning guibg=#ffc24b guifg=#202020
-hi @comment.error guibg=#f43753 guifg=#202020
-hi @keyword.directive guifg=#c9d05c
 
 set listchars+=space:-
 
