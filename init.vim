@@ -43,9 +43,6 @@ endfor
 
 set mouse=
 
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
 set number relativenumber
 
 augroup numbertoggle
