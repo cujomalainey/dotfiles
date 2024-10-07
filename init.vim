@@ -44,6 +44,7 @@ hi @comment.note guifg=#b3deef
 hi @comment.warning guibg=#ffc24b guifg=#202020
 hi @comment.error guibg=#f43753 guifg=#202020
 hi @keyword.directive guifg=#c9d05c
+hi link @constant.builtin @constant
 
 " Unbind the cursor keys in insert, normal and visual modes.
 for prefix in ['i', 'n', 'v']
