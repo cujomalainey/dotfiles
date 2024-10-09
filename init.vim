@@ -43,8 +43,12 @@ hi @comment.todo guifg=#f43753
 hi @comment.note guifg=#b3deef
 hi @comment.warning guibg=#ffc24b guifg=#202020
 hi @comment.error guibg=#f43753 guifg=#202020
+" make defines appear green
 hi @keyword.directive guifg=#c9d05c
+" make NULL render like a constant
 hi link @constant.builtin @constant
+" make line numbers brighter so its easier to read
+hi LineNr guifg=#bbbbbb
 
 " Unbind the cursor keys in insert, normal and visual modes.
 for prefix in ['i', 'n', 'v']
