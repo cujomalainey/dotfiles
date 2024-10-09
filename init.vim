@@ -125,6 +125,9 @@ nmap <silent> gr <Plug>(coc-references)
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
+
 set listchars+=space:-
 
 lua require("init")
