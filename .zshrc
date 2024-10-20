@@ -51,7 +51,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(macos thefuck tmux git vundle)
+plugins=(macos tmux git vundle)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -120,14 +120,8 @@ alias grep='rg'
 alias vi='nvim'
 alias vim='vi'
 
-# I don't like swearing
-alias crap='fuck'
-
 # Useful things
 alias cdg='cd $(git rev-parse --show-toplevel)'
-
-# setup thefuck
-eval $(thefuck --alias)
 
 # configure powerlevel9k
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs root_indicator background_jobs status)
