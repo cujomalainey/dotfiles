@@ -144,3 +144,5 @@ export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_DEFAULT_OPTS='--no-mouse'
 bindkey -s "\C-p" 'vim \"$(fzf)\"\n'
 bindkey "ã" fzf-cd-widget
+
+setopt NO_NOMATCH
