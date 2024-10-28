@@ -8,11 +8,9 @@ fd
 ffmpeg
 fpp
 fzf
-ghi
 git
 git-secret
 gitg
-github-release
 gnupg2
 gource
 homebrew/cask/gpg-suite
@@ -32,14 +30,11 @@ reattach-to-user-namespace
 ripgrep
 s-search
 sl
-thefuck
 tldr
 tmux
-topgrade
 urlview
 wget
-youtube-dl
+yt-dlp
 zoxide
 zsh-autosuggestions
-zsh-completions
 zsh-syntax-highlighting
