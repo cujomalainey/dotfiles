@@ -44,11 +44,11 @@ format = '[ $symbol $branch ]($style)'
 
 [git_commit]
 style = "bg:#c9d05c fg:#202020"
-format = '[ @ $symbol ($version) ]($style)'
+format = '[@ $hash ]($style)'
 
 [git_status]
 style = "bg:#f43753 fg:#202020"
-format = '[ $all_status$ahead_behind ]($style)'
+format = '([ $all_status$ahead_behind ]($style))'
 
 [golang]
 symbol = " "
