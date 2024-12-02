@@ -9,10 +9,9 @@ Required external installs
 * [iTerm2](https://www.iterm2.com/)
 * [vim-plug](https://github.com/junegunn/vim-plug)
 * [oh-my-tmux](https://github.com/gpakosz/.tmux)
-* [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 * [Powerline Fonts](https://github.com/powerline/fonts)
 * [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
-* [Powerlevel10k](https://github.com/romkatv/powerlevel10k)
+* [Starship](https://starship.rs/)
 
 Screenshots
 ![Capture1](https://raw.githubusercontent.com/cujomalainey/system-config/master/Capture1.png)

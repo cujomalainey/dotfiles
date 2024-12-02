@@ -1,0 +1,76 @@
+format = """
+[](#666666)\
+$gcloud\
+[](bg:#73cef4 fg:#666666)\
+$directory\
+[](fg:#73cef4 bg:#c9d05c)\
+$git_branch\
+$git_commit\
+[](fg:#c9d05c bg:#ffc24b)\
+$c\
+$golang\
+$python\
+$rust\
+[](fg:#ffc24b bg:#f43753)\
+$git_status\
+[](fg:#f43753 bg:#bbbbbb)\
+$jobs\
+$sudo\
+[ ](fg:#bbbbbb)\
+"""
+
+# Disable the blank line at the start of the prompt
+add_newline = false
+
+[directory]
+style = "bg:#73cef4 fg:#202020"
+format = "[ $path ]($style)"
+truncation_length = 1
+truncation_symbol = "…/"
+
+[c]
+symbol = " "
+style = "bg:#ffc24b fg:#202020"
+format = '[ $symbol ($version) ]($style)'
+
+[gcloud]
+style = "bg:#666666 fg:#444444"
+format = "[ $symbol$account(@$domain) ]($style)"
+
+[git_branch]
+symbol = ""
+style = "bg:#c9d05c fg:#202020"
+format = '[ $symbol $branch ]($style)'
+
+[git_commit]
+style = "bg:#c9d05c fg:#202020"
+format = '[ @ $symbol ($version) ]($style)'
+
+[git_status]
+style = "bg:#f43753 fg:#202020"
+format = '[ $all_status$ahead_behind ]($style)'
+
+[golang]
+symbol = " "
+style = "bg:#ffc24b fg:#202020"
+format = '[ $symbol ($version) ]($style)'
+
+[jobs]
+symbol = '⚙'
+style = "bg:#bbbbbb fg:#202020"
+format = '[ $symbol $number ]($style)'
+
+[python]
+style = "bg:#ffc24b fg:#202020"
+format = "[ ${symbol}${pyenv_prefix}(${version} ) ]($style)"
+
+[rust]
+symbol = ""
+style = "bg:#ffc24b fg:#202020"
+format = '[ $symbol ($version) ]($style)'
+
+[sudo]
+style = "bg:#bbbbbb fg:#202020"
+disabled = false
+format = "[$symbol ]($style)"
+symbol = "♛"
