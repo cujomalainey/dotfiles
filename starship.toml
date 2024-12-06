@@ -16,6 +16,7 @@ $git_status\
 [](fg:#f43753 bg:#bbbbbb)\
 $jobs\
 $sudo\
+$status\
 [ ](fg:#bbbbbb)\
 """
 
@@ -69,8 +70,13 @@ symbol = ""
 style = "bg:#ffc24b fg:#202020"
 format = '[ $symbol ($version) ]($style)'
 
+[status]
+format = '[ $symbol$status ]($style)'
+style = "bg:#bbbbbb fg:#202020"
+disabled = false
+
 [sudo]
 style = "bg:#bbbbbb fg:#202020"
 disabled = false
-format = "[$symbol ]($style)"
+format = "[ $symbol ]($style)"
 symbol = "♛"
