@@ -20,7 +20,12 @@ export PATH="/usr/local/sbin:$PATH"
 # export PATH="/Users/curtismalainey/.cargo/bin:$PATH"
 
 # only keep unique history, speeds up ZSH plugins in theory
-export HISTCONTROL=ignoreboth:erasedups
+HISTCONTROL=ignoreboth:erasedups
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt appendhistory
+zshaddhistory() { whence ${${(z)1}[1]} >| /dev/null || return 1 }
 
 # tool replacements
 alias ls='eza'
