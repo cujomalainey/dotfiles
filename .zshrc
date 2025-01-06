@@ -1,3 +1,8 @@
+export ZSH=/usr/local/google/home/cujomalainey/.oh-my-zsh
+
+plugins=(macos tmux git)
+
+source $ZSH/oh-my-zsh.sh
 
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -21,11 +26,6 @@ export PATH="/usr/local/sbin:$PATH"
 
 # only keep unique history, speeds up ZSH plugins in theory
 HISTCONTROL=ignoreboth:erasedups
-HISTFILE=~/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
-setopt appendhistory
-zshaddhistory() { whence ${${(z)1}[1]} >| /dev/null || return 1 }
 
 # tool replacements
 alias ls='eza'
@@ -37,6 +37,10 @@ alias du='dust'
 alias vi='nvim'
 alias vim='vi'
 
+# bind non-arrow keys for autosuggestions
+bindkey '^;' autosuggest-accept
+bindkey '^h' autosuggest-execute
+
 # Useful things
 alias cdg='cd $(git rev-parse --show-toplevel)'
 
@@ -47,7 +51,7 @@ alias cdg='cd $(git rev-parse --show-toplevel)'
 export FZF_DEFAULT_COMMAND='rg --files'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_DEFAULT_OPTS='--no-mouse'
+export FZF_DEFAULT_OPTS='--no-mouse --bind "ctrl-j:down,ctrl-k:up"'
 bindkey -s "\C-p" 'vim \"$(fzf)\"\n'
 bindkey "ã" fzf-cd-widget
 
