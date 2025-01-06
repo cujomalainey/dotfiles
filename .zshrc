@@ -38,7 +38,7 @@ alias vi='nvim'
 alias vim='vi'
 
 # bind non-arrow keys for autosuggestions
-bindkey '^;' autosuggest-accept
+bindkey '^j' autosuggest-accept
 bindkey '^h' autosuggest-execute
 
 # Useful things
