@@ -22,6 +22,8 @@ export GPG_TTY=$(tty)
 
 # gpg i think needs this
 export PATH="/usr/local/sbin:$PATH"
+
+# cargo pathing when needed
 # export PATH="/Users/curtismalainey/.cargo/bin:$PATH"
 
 # only keep unique history, speeds up ZSH plugins in theory
@@ -37,9 +39,11 @@ alias du='dust'
 alias vi='nvim'
 alias vim='vi'
 
-# bind non-arrow keys for autosuggestions
+# bind non-arrow keys for autosuggestions/navigation
 bindkey '^j' autosuggest-accept
 bindkey '^h' autosuggest-execute
+bindkey '^[k' up-history
+bindkey '^[j' down-history
 
 # Useful things
 alias cdg='cd $(git rev-parse --show-toplevel)'
