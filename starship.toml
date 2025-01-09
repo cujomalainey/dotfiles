@@ -1,7 +1,7 @@
 format = """
-[](#666666)\
+[](#444444)\
 $gcloud\
-[](bg:#73cef4 fg:#666666)\
+[](bg:#73cef4 fg:#444444)\
 $directory\
 [](fg:#73cef4 bg:#c9d05c)\
 $git_branch\
@@ -35,8 +35,9 @@ style = "bg:#ffc24b fg:#202020"
 format = '[ $symbol ($version) ]($style)'
 
 [gcloud]
-style = "bg:#666666 fg:#444444"
-format = "[ $symbol$account(@$domain) ]($style)"
+symbol = ""
+style = "bg:#444444 fg:#eeeeee"
+format = "[ $symbol $account(@$domain) ]($style)"
 
 [git_branch]
 symbol = ""
