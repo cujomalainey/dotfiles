@@ -20,6 +20,7 @@ require'nvim-treesitter.configs'.setup{
 		"markdown",
 		"markdown_inline",
 		"objdump",
+		"python",
 		"query",
 		"regex",
 		"rust",
