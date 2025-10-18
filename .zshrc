@@ -17,6 +17,9 @@ export EDITOR="vim"
 export VISUAL="vim"
 export GIT_EDITOR='nvim'
 
+export PAGER="page"
+export MANPAGER='nvim +Man!'
+
 # used for signing git commits
 export GPG_TTY=$(tty)
 
