@@ -24,6 +24,7 @@ m-cli
 neovim
 nmap
 ntfs-3g
+page
 platformio
 procs
 reattach-to-user-namespace
