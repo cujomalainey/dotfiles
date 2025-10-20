@@ -18,6 +18,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'ludovicchabant/vim-gutentags'
+Plug 'm-demare/hlargs.nvim'
 
 call plug#end()
 
