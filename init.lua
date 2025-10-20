@@ -37,3 +37,6 @@ require'nvim-treesitter.configs'.setup{
 		enable=true
 	}
 }
+require('hlargs').setup {
+        color = '#9faa00',
+}
