@@ -25,7 +25,6 @@ ripgrep
 sl
 tldr
 tmux
-urlview
 wget
 yt-dlp
 zoxide
