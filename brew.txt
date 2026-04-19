@@ -1,4 +1,3 @@
-bat
 cloc
 ctags
 dos2unix
@@ -12,7 +11,6 @@ git
 git-secret
 gitg
 gnupg2
-gource
 homebrew/cask/gpg-suite
 grip
 gti
@@ -20,16 +18,11 @@ htop
 hub
 known_hosts
 lolcat
-m-cli
 neovim
 nmap
-ntfs-3g
 page
 platformio
-procs
-reattach-to-user-namespace
 ripgrep
-s-search
 sl
 tldr
 tmux
