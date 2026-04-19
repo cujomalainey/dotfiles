@@ -5,7 +5,6 @@ dust
 eza
 fd
 ffmpeg
-fpp
 fzf
 git
 git-secret
