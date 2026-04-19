@@ -15,7 +15,6 @@ grip
 gti
 htop
 hub
-known_hosts
 lolcat
 neovim
 nmap
