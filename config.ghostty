@@ -1,0 +1,25 @@
+font-family = "Hack Mono"
+background = #282828
+foreground = #eeeeee
+
+palette = 0=#000000
+palette = 1=#c5152f
+palette = 2=#9faa00
+palette = 3=#ffc24b
+palette = 4=#335261
+palette = 5=#c5152f
+palette = 6=#44778d
+palette = 7=#bbbbbb
+palette = 8=#202020
+palette = 9=#f43753
+palette = 10=#c9d05c
+palette = 11=#d3b987
+palette = 12=#73cef4
+palette = 13=#44778d
+palette = 14=#b3deef
+palette = 15=#dadada
+
+cursor-color = #dadada
+cursor-text = #ffffff
+selection-background = #666666
+selection-foreground = #ffffff
