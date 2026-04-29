@@ -52,7 +52,7 @@ bindkey '^j' down-history
 alias cdg='cd $(git rev-parse --show-toplevel)'
 
 # setup fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source <(fzf --zsh)
 
 # configure fzf to respect gitignore by using ripgrep
 export FZF_DEFAULT_COMMAND='rg --files'
