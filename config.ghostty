@@ -23,3 +23,4 @@ cursor-color = #dadada
 cursor-text = #ffffff
 selection-background = #666666
 selection-foreground = #ffffff
+shell-integration-features = ssh-terminfo,ssh-env
